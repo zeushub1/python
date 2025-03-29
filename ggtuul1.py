@@ -1,10 +1,5 @@
 import os
 try:
-    import webbrowser
-    webbrowser.open("https://t.me/QueryTool")
-except:
-    pass
-try:
   import requests
   import base64
   from uuid import uuid4
