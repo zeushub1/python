@@ -1,7 +1,7 @@
 import os
 try:
     import webbrowser
-    webbrowser.open("https://t.me/pisaroarsiv")
+    webbrowser.open("https://t.me/QueryTool")
 except:
     pass
 try:
