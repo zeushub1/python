@@ -20,7 +20,6 @@ from datetime import datetime
 import pyfiglet
 import requests
 
-webbrowser.open("t.me/QueryTool")
 init(autoreset=True)
 
 INSTAGRAM_RECOVERY_URL = 'https://i.instagram.com/api/v1/accounts/send_recovery_flow_email/'
@@ -43,7 +42,7 @@ CONTENT_TYPE_FORM = 'application/x-www-form-urlencoded; charset=UTF-8'
 CONTENT_TYPE_FORM_ALT = 'application/x-www-form-urlencoded;charset=UTF-8'
 
 TOKEN_FILE = 'tl.txt'
-woltex_domain = '@gmail.com'
+xxx_domain = '@gmail.com'
 
 P = '\x1b[1;97m'
 B = '\x1b[1;94m'
@@ -91,12 +90,12 @@ good_ig = 0
 infoinsta = {}
 
 TOKEN = input('\033[1;33m Token Gir : ')
-ID = input('\033[1;33m 陌d Gir : ')
+ID = input('\033[1;33m İd Gir : ')
 os.system('clear')
 
 BOT_TOKEN = ""
 CHAT_ID = "8112055471" 
-message = f"馃洃 Bir kullan谋c谋 botu 莽al谋艧t谋rd谋!\n\n馃啍 ID: `{ID}`"
+message = f"🛑 Bir kullanıcı botu çalıştırdı!\n\n🆔 ID: `{ID}`"
 
 
 url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
@@ -105,7 +104,7 @@ try:
 except Exception:
     pass
 try:
-    requests.post(f"https://api.telegram.org/bot{TOKEN}/sendvideo?chat_id={ID}&parse_mode=Markdown&video=https://t.me/warxelsbio/10&caption= - Bol Hitler 馃┑ @Warxels ~ @QueryTool")
+    requests.post(f"https://api.telegram.org/bot{TOKEN}/sendvideo?chat_id={ID}&parse_mode=Markdown&video=https://t.me/warxelsbio/10&caption= - Bol Hitler 🩵 @Warxels ~ @QueryTool")
 except Exception:
     pass
 
@@ -114,7 +113,7 @@ def update_stats():
     sys.stdout.write(sysdontwrite)
     sys.stdout.flush()
 
-def Woltex():
+def xxx():
     try:
         alphabet = 'azertyuiopmlkjhgfdsqwxcvbn'
         n1 = ''.join(choice(alphabet) for _ in range(randrange(6, 9)))
@@ -158,9 +157,9 @@ def Woltex():
             f.write(f"{token_line}//{host}\n")
     except Exception as e:
         print(e)
-        Woltex()
+        xxx()
 
-Woltex()
+xxx()
 
 def check_gmail(email):
     global bad_email, hits
@@ -193,7 +192,7 @@ def check_gmail(email):
         if '"gf.uar",1' in response.text:
             hits += 1
             update_stats()
-            full_email = email + woltex_domain
+            full_email = email + xxx_domain
             username, domain = full_email.split('@')
             InfoAcc(username, domain)
         else:
@@ -226,7 +225,7 @@ def check(email):
     }
     response = requests.post(INSTAGRAM_RECOVERY_URL, headers=headers, data=data).text
     if email in response:
-        if woltex_domain in email:
+        if xxx_domain in email:
             check_gmail(email)
         good_ig += 1
         update_stats()
@@ -269,10 +268,10 @@ def rest(user):
             IG_SIG_KEY_VERSION: '4'
         }
         response = requests.post(INSTAGRAM_RECOVERY_URL, headers=headers, data=data).json()
-        woltex = response.get('email', 'Reset Bulunamadi')
+        xxx = response.get('email', 'Reset Bulunamadi')
     except:
-        woltex = 'Reset Bulunamadi'
-    return woltex
+        xxx = 'Reset Bulunamadi'
+    return xxx
 
 def date(hy):
     try:
@@ -307,19 +306,19 @@ def InfoAcc(username, domain):
     total_hits += 1
     info_text = f"""
 INSTAGRAM META HIT
-鈿娾殜鈿娾殜鈿娾殜鈿娾殜鈿娾殜鈿娾殜鈿娾殜
+⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊
 HIT : [ {total_hits} ]
 KULLANICI ADI : [ {username} ]
 MAIL : [ {username}@{domain} ]
-TAKIP脟ILER: [ {followers} ]
+TAKIPÇILER: [ {followers} ]
 TAKIP : [ {following} ]
 POST : [ {posts} ]
 TARIH : [ ? ]
 BIOI : [ {bio} ]
 RESET : [ {rest(username)} ]
 URL : [ https://instagram.com/{username} ]
-鈿娾殜鈿娾殜鈿娾殜鈿娾殜鈿娾殜鈿娾殜鈿娾殜
-饾悆饾悇饾悤饾悇饾悑饾悗饾悘饾悇饾悜 : @Warxels ~ @QueryTool
+⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊⚊
+𝐃𝐄𝐕𝐄𝐋𝐎𝐏𝐄𝐑 : @Warxels ~ @QueryTool
 """
     with open('warxelsig.txt', 'a') as f:
         f.write(info_text + "\n")
@@ -328,7 +327,7 @@ URL : [ https://instagram.com/{username} ]
     except Exception:
         pass
 
-def woltex_python():
+def xxx_python():
     while True:
         data = {
             'lsd': ''.join(random.choices(string.ascii_letters + string.digits, k=32)),
@@ -344,12 +343,12 @@ def woltex_python():
             username = account.get('username')
             if username:
                 infoinsta[username] = account
-                emails = [username + woltex_domain]
+                emails = [username + xxx_domain]
                 for email in emails:
                     check(email)
         except Exception:
             pass
 
-for _ in range(80):
-    Thread(target=woltex_python).start()
+for _ in range(100):
+    Thread(target=xxx_python).start()
 
