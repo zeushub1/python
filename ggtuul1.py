@@ -1,5 +1,9 @@
-import pycountry
 import os
+try:
+    import webbrowser
+    webbrowser.open("https://t.me/QueryTool")
+except:
+    pass
 try:
   import requests
   import base64
@@ -428,7 +432,7 @@ def get_username():
                    
 
 threads = []
-for i in range(20):
+for i in range(15):
     t = threading.Thread(target=get_username)
     threads.append(t)
     t.start()
