@@ -45,7 +45,6 @@ except:
     os.system('pip install python-cfonts')
     exit(print('Toolu yeniden başlat!'))
 logo2 = render('WRX', colors=['cyan', 'white'], align='center')
-webbrowser.open("https://t.me/QueryHack")
 logo = render('INSTA', colors=['cyan', 'white'], align='center')
 print("_" *60)
 
@@ -495,9 +494,3 @@ def gg():
         except:''
 for _ in range(100):
     Thread(target=gg).start()
-    
-#By:@Warxels & Channel: @QueryHack
-
-
-    
-    
